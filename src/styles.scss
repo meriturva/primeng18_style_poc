@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+@tailwind base;
+}
+
+@layer tailwind-utilities {
+@tailwind components;
+@tailwind utilities;
+}
+
+
+// Define my variables
+@media (prefers-color-scheme: dark) {
+  :root {
+    --caep-button-secondary-background: red;
+    --caep-button-secondary-color: yellow;
+  }
+}
+
+// Bootstrap
+.btn-secondary {
+  --bs-btn-color: var(--caep-button-secondary-color);
+  --bs-btn-bg: var(--caep-button-secondary-background);
+}
